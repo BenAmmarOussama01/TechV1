@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from "lucide-react";
 import Logo from '../assets/images/logo.png';
 import { navItems } from "../constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -38,13 +39,13 @@ const Navbar = () => {
         <ul className="hidden lg:flex space-x-10">
           {navItems.map((item, index) => (
             <li key={index} className="group">
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="text-[#BEC083] font-semibold hover:text-[#BEC083] relative transition-all duration-300"
               >
                 {item.label}
                 <span className="block h-1 w-0 group-hover:w-full transition-all duration-300 bg-[#BEC083]"></span>
-              </a>
+                </Link>
             </li>
           ))}
         </ul>
@@ -74,13 +75,13 @@ const Navbar = () => {
               <ul>
                 {navItems.map((item, index) => (
                   <li key={index} className="text-center">
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="text-[#BEC083] text-lg hover:underline hover:text-[#BEC083] active:underline block py-2"
                       onClick={toggleNavbar} // Close the drawer on link click
                     >
                       {item.label}
-                    </a>
+                      </Link>
                   </li>
                 ))}
               </ul>

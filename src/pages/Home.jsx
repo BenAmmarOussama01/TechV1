@@ -5,6 +5,7 @@ import image1 from '../assets/images/homeImages/image1.png';
 import { Products } from "../constants/index.jsx"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -64,18 +65,18 @@ const Home = () => {
             
             {/* Buttons */}
             <div className="mt-8 space-x-4">
-              <a
-                href="/contact-us"
+              <Link
+                to="/contact-us"
                 className="inline-block px-6 py-3 bg-[#BEC083] text-white rounded-lg font-medium hover:bg-[#a5a863] transition duration-300"
               >
                 Contact us
-              </a>
-              <a
-                href="/services"
+              </Link>
+              <Link
+                to="/services"
                 className="inline-block px-6 py-3 border border-[#BEC083] text-[#BEC083] rounded-lg font-medium hover:bg-[#f2f4f0] transition duration-300"
               >
                 Discover our services
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -122,14 +123,14 @@ const Home = () => {
 
           <div className="flex gap-8 transition-transform duration-500 transform">
             {displayedProducts.map((product, index) => {
-              const isCenter = index === Math.floor(productsToShow / 2); // Identify the center item
+              const isCenter = index === Math.floor(productsToShow / 2); 
               return (
                 <motion.div
                   key={index}
                   className={`text-center transition-transform duration-500 ${
                     isCenter ? "scale-110" : "scale-100"
                   }`}
-                  whileHover={{ scale: 1.2 }} // Add hover effect
+                  whileHover={{ scale: 1.2 }} 
                 >
                   <img
                     src={product.image}
@@ -141,13 +142,13 @@ const Home = () => {
                     {product.name}
                   </h3>
                   <p className="text-gray-700 mb-4">{product.Description}</p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="inline-flex items-center text-[#BEC083] font-semibold hover:underline"
                   >
                     Explore page
                     <span className="ml-2 text-[#BEC083]">&#x2192;</span>
-                  </a>
+                  </Link>
                 </motion.div>
               );
             })}
