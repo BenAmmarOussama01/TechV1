@@ -5,6 +5,11 @@ import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
 */
 import imageViize from "../assets/images/homeImages/image2.png"
+import p1 from "../assets/images/homeImages/part1.png"
+import p2 from "../assets/images/homeImages/part2.png"
+import p3 from "../assets/images/homeImages/part3.png"
+import p4 from "../assets/images/homeImages/part4.png"
+import p5 from "../assets/images/homeImages/part5.png"
 
 export const navItems = [
   { label: "Product", href: "/products" },
@@ -14,7 +19,7 @@ export const navItems = [
 ];
 
 export const Products = [
-  { 
+  {
     image: imageViize,
     name: "Viize Traffic1",
     Description: "Process and Enhance Your Video Streams in Real-Time"
@@ -56,6 +61,13 @@ export const Products = [
     Description: "Process and Enhance Your Video Streams in Real-Time"
     
   },
+];
+export const Partners = [
+  { id: 1, img: p1, alt: "PME MTL" },
+  { id: 2, img: p2, alt: "ADRIQ" },
+  { id: 3, img: p3, alt: "Numerare" },
+  { id: 4, img: p4, alt: "Jean Talon Est" },
+  { id: 5, img: p5, alt: "Aéro Montréal" },
 ];
 /*
 
