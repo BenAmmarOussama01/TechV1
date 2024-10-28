@@ -13,14 +13,14 @@ const standards = [
 
 const Standards = React.forwardRef(({ imageSrc }, ref) => {
   const { ref: inViewRef, inView } = useInView({
-    triggerOnce: true, // Only trigger once when it comes into view
-    threshold: 0.1, // Trigger when 10% of the section is visible
+    triggerOnce: true, 
+    threshold: 0.1,
   });
 
   return (
     <section ref={ref} className="flex flex-col md:flex-row items-center p-8 space-y-8 md:space-y-0 md:space-x-8">
       <motion.div
-        ref={inViewRef} // Attach the ref to this div
+        ref={inViewRef} 
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}

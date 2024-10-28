@@ -11,7 +11,7 @@ const Navbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
 
-  // Effect to close the mobile drawer when the screen width exceeds a certain threshold
+ 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) { 
@@ -21,7 +21,7 @@ const Navbar = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Cleanup the event listener on component unmount
+  
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -60,8 +60,8 @@ const Navbar = () => {
         {/* Mobile Drawer */}
         {mobileDrawerOpen && (
           <div
-            className="fixed inset-0 z-20 bg-black bg-opacity-50" // Overlay background
-            onClick={toggleNavbar} // Close on overlay click
+            className="fixed inset-0 z-20 bg-black bg-opacity-50" 
+            onClick={toggleNavbar} 
           >
             <div
               className="absolute right-0 z-30 mt-20 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -70,7 +70,7 @@ const Navbar = () => {
               aria-labelledby="user-menu-button"
               tabIndex="-1"
               style={{ backgroundColor: '#F7F8F9' }}
-              onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the menu
+              onClick={(e) => e.stopPropagation()} 
             >
               <ul>
                 {navItems.map((item, index) => (
@@ -78,7 +78,7 @@ const Navbar = () => {
                     <Link
                       to={item.href}
                       className="text-[#BEC083] text-lg hover:underline hover:text-[#BEC083] active:underline block py-2"
-                      onClick={toggleNavbar} // Close the drawer on link click
+                      onClick={toggleNavbar} 
                     >
                       {item.label}
                       </Link>

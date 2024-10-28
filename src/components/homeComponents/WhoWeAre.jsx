@@ -21,7 +21,7 @@ const WhoWeAre = () => {
       ref={ref}
       className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-100 text-gray-700"
     >
-      {/* Image Container with Scroll Animation */}
+    
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
@@ -57,7 +57,7 @@ const WhoWeAre = () => {
         </div>
       </motion.div>
 
-      {/* Text Content */}
+    
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={controls}

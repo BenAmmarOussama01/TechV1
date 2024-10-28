@@ -9,10 +9,9 @@ import WhoWeAre from '../components/homeComponents/WhoWeAre.jsx';
 import TopSection from '../components/homeComponents/TopSection.jsx';
 import Standards from '../components/homeComponents/Standards.jsx';
 import image3 from '../assets/images/homeImages/image3.png'; 
-import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
-  const sectionRef = useRef(null); // Ref for observing the ProductsSection
+  const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,10 +27,10 @@ const Home = () => {
         if (entry.isIntersecting) {
           setIsVisible(true);
         } else {
-          setIsVisible(false); // Optional: Reset visibility when not in view
+          setIsVisible(false); 
         }
       },
-      { threshold: 0.1 } // Adjust threshold if necessary
+      { threshold: 0.1 } 
     );
 
     if (sectionRef.current) {
