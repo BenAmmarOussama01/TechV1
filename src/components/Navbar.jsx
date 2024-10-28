@@ -14,8 +14,8 @@ const Navbar = () => {
   // Effect to close the mobile drawer when the screen width exceeds a certain threshold
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) { // Change this value if your breakpoint is different
-        setMobileDrawerOpen(false); // Close mobile drawer when screen is larger than or equal to 1024px
+      if (window.innerWidth >= 1024) { 
+        setMobileDrawerOpen(false); 
       }
     };
 

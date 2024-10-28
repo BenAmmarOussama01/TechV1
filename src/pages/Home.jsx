@@ -27,17 +27,17 @@ const Home = () => {
   }, []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const productsToShow = 3; // Number of products to show at a time
-  const [isVisible, setIsVisible] = useState(false); // For scroll animation
-  const sectionRef = useRef(null); // Reference to the section for intersection observer
+  const productsToShow = 3; 
+  const [isVisible, setIsVisible] = useState(false); 
+  const sectionRef = useRef(null);
 
-  // Handle previous button click
+  // Handle button click
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? Products.length - productsToShow : prevIndex - 1
     );
   };
-  // Handle next button click
+  
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === Products.length - productsToShow ? 0 : prevIndex + 1
